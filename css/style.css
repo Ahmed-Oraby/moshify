@@ -12,6 +12,7 @@
     --color-accent: #ff3400;
     --color-heading: #1b0760;
     --color-body: #918ca4;
+    --color-icon-bg: #f3f9fa;
 }
 
 /* Typography */
@@ -156,4 +157,26 @@ a {
     .list--tick .list__item {
         padding-left: 0;
     }
+}
+
+/* Icons */
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem;
+}
+
+.icon--primary {
+    fill: var(--color-primary);
+}
+
+.icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-icon-bg);
 }
