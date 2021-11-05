@@ -12,6 +12,7 @@
     --color-accent: #ff3400;
     --color-heading: #1b0760;
     --color-body: #918ca4;
+    --color-body-darker: #5c5577;
     --color-icon-bg: #f3f9fa;
     --color-border: #ccc;
     --border-radius: 30px;
@@ -167,7 +168,7 @@ a {
 .icon {
     width: 40px;
     height: 40px;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
 }
 
 .icon--primary {
@@ -371,5 +372,75 @@ input::placeholder {
     }
     .plan__description {
         font-size: 1.7rem;
+    }
+}
+
+/* Media Objects */
+
+.media {
+    display: flex;
+}
+
+.media__body {
+    margin-left: 2rem;
+}
+
+.media__image {
+    margin-top: 1rem;
+}
+
+.media__title {
+    margin-top: 0;
+}
+
+/* Quotes */
+
+.quote {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.quote__text {
+    font-style: italic;
+    color: var(--color-body-darker);
+}
+
+.quote__text::before {
+    content: open-quote;
+}
+
+.quote__text::after {
+    content: close-quote;
+}
+
+.quote__author {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.quote__company {
+    font-size: 2rem;
+    opacity: 0.4;
+    margin-top: 0;
+}
+
+.quote__line {
+    position: relative;
+    width: 50px;
+    bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .quote {
+        font-size: 2rem;
+    }
+    .quote__author {
+        font-size: 2.4rem;
+    }
+    .quote__company {
+        font-size: 1.6rem;
+    }
+    .quote__line {
+        bottom: 15px;
     }
 }
