@@ -541,3 +541,36 @@ input::placeholder {
         justify-self: start;
     }
 }
+
+/* Collapsible */
+
+.collapsible__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.collapsible__icon {
+    transform: rotate(-0.25turn);
+    transition: transform 0.3s;
+}
+
+.collapsible__items {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__icon {
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__items {
+    max-height: 100vh;
+    opacity: 1;
+}
