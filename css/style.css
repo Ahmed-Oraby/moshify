@@ -253,6 +253,11 @@ a {
     display: inline-block;
 }
 
+.btn--stretched {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
 @media screen and (min-width: 1024px) {
     .btn {
         font-size: 1.5rem;
@@ -497,4 +502,42 @@ input::placeholder {
     position: absolute;
     top: 25px;
     right: -35px;
+}
+
+/* Callouts */
+
+.callout {
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+.callout--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.callout__text {
+    text-align: center;
+}
+
+.callout__header {
+    color: #fff;
+}
+
+.callout__btn {
+    justify-self: center;
+    align-self: center;
+    margin: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--cols-2 {
+        grid-template-columns: 1fr auto;
+    }
+    .callout__text {
+        text-align: left;
+    }
+    .callout__btn {
+        justify-self: start;
+    }
 }
