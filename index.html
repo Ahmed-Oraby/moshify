@@ -21,5 +21,20 @@
         <link rel="stylesheet" href="css/style.css" />
         <script src="js/app.js" defer></script>
     </head>
-    <body></body>
+    <body>
+        <nav class="nav-bar">
+            <header class="nav-bar__header collapsible__header">
+                <a class="nav__logo" href="/"><img src="images/logo.svg" alt="" /></a>
+                <svg class="icon icon--white nav__icon">
+                    <use xlink:href="images/sprite.svg#menu"></use>
+                </svg>
+            </header>
+            <ul class="list nav__list collapsible__items">
+                <li class="nav__item"><a href="#">Hosting</a></li>
+                <li class="nav__item"><a href="#">VPS</a></li>
+                <li class="nav__item"><a href="#">Domain</a></li>
+                <li class="nav__item"><a href="#">Pricing</a></li>
+            </ul>
+        </nav>
+    </body>
 </html>
