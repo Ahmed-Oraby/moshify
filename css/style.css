@@ -37,6 +37,7 @@ h2,
 h3 {
     color: var(--color-heading);
     margin: 1.5rem 0;
+    line-height: 1.1;
 }
 
 h1 {
@@ -201,7 +202,7 @@ a {
 /* Buttons */
 
 .btn {
-    border-radius: var(--border-radius);
+    border-radius: 40px;
     border: none;
     cursor: pointer;
     font-size: 1.8rem;
@@ -652,6 +653,7 @@ input::placeholder {
     border-bottom: 1px solid darkgray;
     padding: 1rem;
     transition: background-color 0.3s;
+    margin: 0 5rem;
 }
 
 .nav__item:hover {
@@ -704,5 +706,49 @@ input::placeholder {
 @media screen and (min-width: 1024px) {
     .nav-bar {
         flex-direction: row;
+    }
+}
+
+/* Hero Section */
+
+.hero {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    padding-top: 10rem;
+}
+
+.hero__text {
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin: 2rem 0 5rem;
+    color: #b9c3cf;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+.hero__btn {
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+
+@media screen and (min-width: 768px) {
+    .hero .grid {
+        align-items: center;
+    }
+    .hero {
+        padding-top: 5rem;
+    }
+    .hero .block__header {
+        text-align: left;
+    }
+    .hero__btn {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding-top: 0;
     }
 }
