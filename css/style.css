@@ -574,3 +574,44 @@ input::placeholder {
     max-height: 100vh;
     opacity: 1;
 }
+
+/* Block */
+
+.block {
+    --padding-vertical: 6rem;
+    padding: var(--padding-vertical) 4rem;
+}
+
+.block__header {
+    text-align: center;
+}
+
+.block__title {
+    margin-top: 0;
+}
+
+.block--bg-dark {
+    background-color: black;
+    color: #7b858b;
+}
+
+.block--bg-dark .block__title {
+    color: white;
+}
+
+.block--skew-right {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    padding-bottom: calc(var(--padding-vertical) + 5rem);
+}
+
+.block--skew-left {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    padding-bottom: calc(var(--padding-vertical) + 5rem);
+}
+
+/* Container */
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
