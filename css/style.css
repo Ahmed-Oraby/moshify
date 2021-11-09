@@ -15,7 +15,7 @@
     --color-body-darker: #5c5577;
     --color-icon-bg: #f3f9fa;
     --color-border: #ccc;
-    --border-radius: 30px;
+    --border-radius: 40px;
 }
 
 /* Typography */
@@ -37,11 +37,11 @@ h2,
 h3 {
     color: var(--color-heading);
     margin: 1.5rem 0;
-    line-height: 1.1;
 }
 
 h1 {
     font-size: 7rem;
+    line-height: 1.1;
 }
 
 h2 {
@@ -101,10 +101,10 @@ a {
 /* Badges */
 
 .badge {
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     font-size: 2rem;
-    font-weight: 600;
-    padding: 0.8rem 2rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
     white-space: nowrap;
 }
 
@@ -202,7 +202,7 @@ a {
 /* Buttons */
 
 .btn {
-    border-radius: 40px;
+    border-radius: var(--border-radius);
     border: none;
     cursor: pointer;
     font-size: 1.8rem;
@@ -288,7 +288,7 @@ input::placeholder {
 
 .input-group .input {
     border: none;
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     flex-grow: 1;
 }
 
@@ -750,5 +750,46 @@ input::placeholder {
 @media screen and (min-width: 1024px) {
     .hero {
         padding-top: 0;
+    }
+}
+
+/* Domain Block */
+
+.domain-block .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.domain-block .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    margin-top: 4rem;
+    border: none;
+    max-width: 700px;
+    margin: 4rem auto;
+}
+
+.domain-block__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+    max-width: 750px;
+    margin: 4rem auto;
+}
+
+.domain-block__prices > li {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    .domain-block__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-rows: 1fr;
     }
 }

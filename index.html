@@ -46,7 +46,47 @@
                     <p class="hero__text">Deploy your website in less than 60 seconds.</p>
                     <a href="#" class="hero__btn btn btn--accent btn--stretched">Get Started</a>
                 </header>
-                <img class="hero__image" src="images/banner.png" alt="" />
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
+                    />
+                    <source
+                        type="image/png"
+                        srcset="images/banner.png 1x, images/banner@2x.png 2x"
+                    />
+                    <img class="hero__image" src="images/banner.png" alt="" />
+                </picture>
+            </div>
+        </section>
+
+        <!-- Domain Section -->
+        <section class="block domain-block">
+            <div class="container">
+                <header class="block__header">
+                    <h2 class="block__title">Web hosting Starting at 9$ per Month</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illum odit
+                        consequatur sapiente perferendis pariatur nam nobis nostrum aliquam error.
+                    </p>
+                </header>
+                <div class="input-group">
+                    <input type="text" class="input" placeholder="Enter domain name here..." />
+                    <button class="btn btn--accent">
+                        <svg class="icon icon--white">
+                            <use xlink:href="images/sprite.svg#search"></use>
+                        </svg>
+                        Search
+                    </button>
+                </div>
+                <ul class="list domain-block__prices">
+                    <li><span class="badge">.com $9.26</span></li>
+                    <li><span class="badge badge--secondary">.sg $7.91</span></li>
+                    <li><span class="badge">.space $12.98</span></li>
+                    <li><span class="badge">.info $14.15</span></li>
+                    <li><span class="badge">.net $16.15</span></li>
+                    <li><span class="badge">.xyz $10.15</span></li>
+                </ul>
             </div>
         </section>
     </body>
