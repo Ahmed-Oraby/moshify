@@ -125,7 +125,7 @@ a {
 
 @media screen and (min-width: 1024px) {
     .badge {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .badge--small {
         font-size: 1.2rem;
@@ -137,7 +137,6 @@ a {
 .list {
     list-style-type: none;
     padding-left: 0;
-    color: var(--color-heading);
 }
 
 .list--inline .list__item {
@@ -148,6 +147,7 @@ a {
 .list--tick {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-heading);
 }
 
 .list--tick .list__item {
@@ -306,7 +306,7 @@ input::placeholder {
 
 .card {
     border-radius: 8px;
-    box-shadow: 0 0 20px 20px #f6f8f9;
+    box-shadow: 0 0 20px 15px #f6f8f9;
     overflow: hidden;
 }
 
@@ -328,8 +328,7 @@ input::placeholder {
 /* Plans */
 
 .plan {
-    width: 400px;
-    margin: 5rem;
+    transition: transform 0.3s ease-out;
 }
 
 .plan__name {
@@ -355,6 +354,10 @@ input::placeholder {
     background-color: #02cdf1;
 }
 
+.card--primary .badge--primary {
+    background-color: #126de4;
+}
+
 .plan__description {
     font-size: 2rem;
     letter-spacing: 1px;
@@ -366,8 +369,20 @@ input::placeholder {
     font-weight: 500;
 }
 
-.plan.plan--popular {
+.plan--popular .card {
     position: relative;
+}
+
+.plan--popular {
+    transform: scale(1.1);
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan--popular:hover {
+    transform: scale(1.15);
 }
 
 .plan--popular .card__header::before {
@@ -398,6 +413,7 @@ input::placeholder {
 
 .media {
     display: flex;
+    margin-top: 2rem;
 }
 
 .media__body {
@@ -405,11 +421,24 @@ input::placeholder {
 }
 
 .media__image {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .media__title {
-    margin-top: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.media__text {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .media__text {
+        font-size: 1.8rem;
+    }
 }
 
 /* Quotes */
@@ -601,12 +630,12 @@ input::placeholder {
 }
 
 .block--skew-right {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     padding-bottom: calc(var(--padding-vertical) + 5rem);
 }
 
 .block--skew-left {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     padding-bottom: calc(var(--padding-vertical) + 5rem);
 }
 
@@ -712,7 +741,6 @@ input::placeholder {
 /* Hero Section */
 
 .hero {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     padding-top: 10rem;
 }
 
@@ -764,7 +792,6 @@ input::placeholder {
 
 .domain-block .input-group {
     box-shadow: 0 0 30px 20px #e6ebee;
-    margin-top: 4rem;
     border: none;
     max-width: 700px;
     margin: 4rem auto;
@@ -774,13 +801,14 @@ input::placeholder {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 6rem);
-    margin-top: 4rem;
+    gap: 2rem 4rem;
     font-size: 2rem;
     font-weight: bold;
     justify-items: center;
     align-items: center;
-    max-width: 750px;
+    max-width: 800px;
     margin: 4rem auto;
+    color: var(--color-heading);
 }
 
 .domain-block__prices > li {
@@ -791,5 +819,76 @@ input::placeholder {
     .domain-block__prices {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         grid-template-rows: 1fr;
+    }
+}
+
+/* Plan Block */
+
+.plan-block .list__none {
+    list-style: none;
+}
+
+.plan-block .grid {
+    gap: 8rem 4rem;
+}
+
+.plan-block .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Feature Section */
+
+.feature {
+    gap: 4rem;
+    margin-top: 12rem;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+
+.feature__heading {
+    margin: 1rem 0;
+}
+
+.feature__image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .feature:nth-of-type(even) .feature__content {
+        order: 2;
+    }
+}
+
+/* Showcase Block */
+
+.showcase-block__image > img {
+    width: 100%;
+}
+
+.showcase-block .grid {
+    gap: 2rem;
+}
+
+.showcase-block .block__title {
+    margin-bottom: 5rem;
+}
+
+.showcase-block .icon {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .showcase-block .grid {
+        grid-template-columns: 50% 50%;
+    }
+    .showcase-block__image {
+        justify-self: end;
+    }
+    .showcase-block__image > img {
+        width: auto;
     }
 }
