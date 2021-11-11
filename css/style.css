@@ -208,7 +208,7 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
-    padding: 2rem 3rem;
+    padding: 2rem 2vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -290,6 +290,7 @@ input::placeholder {
     border: none;
     padding: 1.5rem 2.5rem;
     flex-grow: 1;
+    width: 100%;
 }
 
 .input-group .btn {
@@ -539,6 +540,9 @@ input::placeholder {
 .callout {
     padding: 4rem;
     border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    transform: translateY(10rem);
 }
 
 .callout--primary {
@@ -800,7 +804,7 @@ input::placeholder {
 
 .domain-block__prices {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     gap: 2rem 4rem;
     font-size: 2rem;
@@ -814,6 +818,12 @@ input::placeholder {
 
 .domain-block__prices > li {
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .domain-block__prices {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -896,6 +906,10 @@ input::placeholder {
 
 /* Footer Section */
 
+.footer {
+    padding-top: 20rem;
+}
+
 .footer.block--bg-dark {
     background-color: #232323;
 }
@@ -911,7 +925,7 @@ input::placeholder {
 .footer .list a {
     color: #ada9b2;
     transition: color 0.3s;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .footer .list a:hover {
@@ -935,7 +949,7 @@ input::placeholder {
 
 @media screen and (min-width: 1024px) {
     .footer .grid {
-        grid-template-columns: 30% repeat(4, 1fr);
+        grid-template-columns: 25% repeat(auto-fit, minmax(10rem, 1fr));
         gap: 5rem;
     }
     .footer__logo {
