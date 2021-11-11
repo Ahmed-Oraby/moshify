@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/* Setting the basic colors */
+
 :root {
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
@@ -18,11 +20,19 @@
     --border-radius: 40px;
 }
 
+/* Setting the Selection colors */
+
+::selection {
+    background-color: yellow;
+    color: #000;
+}
+
 /* Typography */
 
 html {
     /* equivalent to 10px at browser font-size set to 16px ==> 1rem = 10px */
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -374,16 +384,8 @@ input::placeholder {
     position: relative;
 }
 
-.plan--popular {
-    transform: scale(1.1);
-}
-
 .plan:hover {
     transform: scale(1.05);
-}
-
-.plan--popular:hover {
-    transform: scale(1.15);
 }
 
 .plan--popular .card__header::before {
@@ -393,6 +395,15 @@ input::placeholder {
     position: absolute;
     top: -5px;
     right: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .plan--popular {
+        transform: scale(1.1);
+    }
+    .plan--popular:hover {
+        transform: scale(1.15);
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -463,8 +474,9 @@ input::placeholder {
 }
 
 .quote__author {
-    margin-bottom: 0;
-    font-weight: 500;
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-heading);
 }
 
 .quote__company {
@@ -489,9 +501,6 @@ input::placeholder {
     .quote__company {
         font-size: 1.6rem;
     }
-    .quote__line {
-        bottom: 15px;
-    }
 }
 
 /* grids */
@@ -513,10 +522,6 @@ input::placeholder {
 
 /* testimonials */
 
-.testimonial {
-    padding: 3rem;
-}
-
 .testimonial__image > img {
     width: 100%;
     object-fit: cover;
@@ -526,7 +531,6 @@ input::placeholder {
 .testimonial__image {
     position: relative;
     margin-right: 4rem;
-    /* align-self: center; */
 }
 
 .testimonial__image > .icon-container {
@@ -612,7 +616,7 @@ input::placeholder {
 /* Block */
 
 .block {
-    --padding-vertical: 6rem;
+    --padding-vertical: 8rem;
     padding: var(--padding-vertical) 4rem;
 }
 
@@ -656,6 +660,11 @@ input::placeholder {
 .nav-bar {
     background-color: black;
     padding: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
 }
 
 .nav-bar__header {
@@ -681,6 +690,7 @@ input::placeholder {
 .nav__list {
     text-align: center;
     margin: 0;
+    padding-bottom: 2rem;
 }
 
 .nav__item {
@@ -746,7 +756,7 @@ input::placeholder {
 /* Hero Section */
 
 .hero {
-    padding-top: 10rem;
+    padding-top: 15rem;
 }
 
 .hero__text {
@@ -925,7 +935,6 @@ input::placeholder {
 .footer .list a {
     color: #ada9b2;
     transition: color 0.3s;
-    /* white-space: nowrap; */
 }
 
 .footer .list a:hover {
