@@ -962,6 +962,30 @@ input::placeholder {
     text-align: center;
 }
 
+.footer .credits {
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer .credits a {
+    color: var(--color-primary);
+}
+
+.footer__logo .icon {
+    opacity: 0.5;
+    transition: all 0.3s;
+    margin: 0 1rem;
+}
+
+.footer__logo .icon:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 @media screen and (min-width: 1024px) {
     .footer .grid {
         grid-template-columns: 25% repeat(auto-fit, minmax(10rem, 1fr));
@@ -988,16 +1012,4 @@ input::placeholder {
     .footer .collapsible {
         border: none;
     }
-}
-
-.footer .credits {
-    color: #fff;
-    text-align: center;
-    border: 2px solid #fff;
-    padding: 2rem;
-    margin-top: 4rem;
-}
-
-.footer .credits a {
-    color: var(--color-primary);
 }
