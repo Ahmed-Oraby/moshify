@@ -659,7 +659,7 @@ input::placeholder {
 
 .nav-bar {
     background-color: black;
-    padding: 1rem;
+    padding: 1.5rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -690,7 +690,6 @@ input::placeholder {
 .nav__list {
     text-align: center;
     margin: 0;
-    padding-bottom: 2rem;
 }
 
 .nav__item {
@@ -719,6 +718,10 @@ input::placeholder {
     border-radius: 5px;
 }
 
+.nav-bar.collapsible--expanded .nav__list {
+    padding-bottom: 2rem;
+}
+
 @media screen and (min-width: 768px) {
     .nav__icon {
         display: none;
@@ -740,6 +743,9 @@ input::placeholder {
     }
     .nav__item:hover {
         background-color: #000;
+    }
+    .nav-bar.collapsible--expanded .nav__list {
+        padding-bottom: 0;
     }
     .nav-bar .collapsible__items {
         max-height: 100vh;
@@ -982,4 +988,16 @@ input::placeholder {
     .footer .collapsible {
         border: none;
     }
+}
+
+.footer .credits {
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer .credits a {
+    color: var(--color-primary);
 }
