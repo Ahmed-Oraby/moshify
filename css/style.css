@@ -1,12 +1,4 @@
-/* Setting box-sizing and essential variables */
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-/* Setting the basic colors */
+/* Setting the essential variables */
 
 :root {
     --color-primary: #2584ff;
@@ -18,6 +10,14 @@
     --color-icon-bg: #f3f9fa;
     --color-border: #ccc;
     --border-radius: 40px;
+}
+
+/* Setting box-sizing  */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 /* Setting the Selection colors */
@@ -179,7 +179,6 @@ a {
 .icon {
     width: 40px;
     height: 40px;
-    /* margin: 0.5rem; */
 }
 
 .icon--primary {
@@ -541,8 +540,12 @@ input::placeholder {
 
 /* Callouts */
 
-.callout {
-    padding: 4rem;
+.callout-block {
+    min-width: 400px;
+}
+
+.callout__content {
+    padding: 2rem 4rem;
     border-radius: 10px;
     max-width: 900px;
     margin: 0 auto;
@@ -569,7 +572,7 @@ input::placeholder {
 }
 
 @media screen and (min-width: 768px) {
-    .callout .grid--cols-2 {
+    .callout-block .grid--cols-2 {
         grid-template-columns: 1fr auto;
     }
     .callout__text {
@@ -617,7 +620,8 @@ input::placeholder {
 
 .block {
     --padding-vertical: 8rem;
-    padding: var(--padding-vertical) 4rem;
+    padding: var(--padding-vertical) 2rem;
+    min-width: 400px;
 }
 
 .block__header {
@@ -632,6 +636,7 @@ input::placeholder {
 .block--bg-dark {
     background-color: black;
     color: #7b858b;
+    /* min-width: 400px; */
 }
 
 .block--bg-dark .block__title {
@@ -652,6 +657,7 @@ input::placeholder {
 
 .container {
     max-width: 1140px;
+    /* min-width: 400px; */
     margin: 0 auto;
 }
 
@@ -785,9 +791,7 @@ input::placeholder {
     .hero .grid {
         align-items: center;
     }
-    .hero {
-        padding-top: 5rem;
-    }
+
     .hero .block__header {
         text-align: left;
     }
@@ -798,7 +802,7 @@ input::placeholder {
 
 @media screen and (min-width: 1024px) {
     .hero {
-        padding-top: 0;
+        padding-top: 10rem;
     }
 }
 
