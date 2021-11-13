@@ -50,7 +50,7 @@ h3 {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 6rem;
     line-height: 1.1;
 }
 
@@ -264,8 +264,8 @@ a {
 }
 
 .btn--stretched {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -506,6 +506,7 @@ input::placeholder {
 
 .grid {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 @media screen and (min-width: 768px) {
@@ -541,7 +542,7 @@ input::placeholder {
 /* Callouts */
 
 .callout__content {
-    padding: 2rem 4rem;
+    padding: 4rem;
     border-radius: 10px;
     max-width: 900px;
     margin: 0 auto;
@@ -564,7 +565,6 @@ input::placeholder {
 .callout__btn {
     justify-self: center;
     align-self: center;
-    margin: 3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -576,6 +576,7 @@ input::placeholder {
     }
     .callout__btn {
         justify-self: start;
+        margin: 3rem;
     }
 }
 
@@ -771,11 +772,6 @@ input::placeholder {
 
 .hero__image {
     width: 100%;
-}
-
-.hero__btn {
-    padding-left: 10rem;
-    padding-right: 10rem;
 }
 
 @media screen and (min-width: 768px) {

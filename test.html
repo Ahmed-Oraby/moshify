@@ -22,96 +22,25 @@
         <script src="js/app.js" defer></script>
     </head>
     <body>
-        <footer class="block block--bg-dark footer">
-            <div class="container grid">
-                <div class="collapsible collapsible--expanded">
-                    <header class="collapsible__header">
-                        <h2 class="collapsible__title block__title">Products</h2>
-                        <img
-                            src="images/chevron.svg"
-                            alt=""
-                            class="icon icon--white collapsible__icon"
-                        />
-                    </header>
-                    <div class="collapsible__items">
-                        <ul class="list">
-                            <li><a href="#">WordPress Hosting</a></li>
-                            <li><a href="#">Free Automated WordPress </a></li>
-                            <li><a href="#">Migrations</a></li>
-                            <li><a href="#">Domain Names</a></li>
-                            <li><a href="#">Monthly Web Hosting</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="collapsible">
-                    <header class="collapsible__header">
-                        <h2 class="collapsible__title block__title">Company</h2>
-                        <img
-                            src="images/chevron.svg"
-                            alt=""
-                            class="icon icon--white collapsible__icon"
-                        />
-                    </header>
-                    <div class="collapsible__items">
-                        <ul class="list">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Green Hosting</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="collapsible">
-                    <header class="collapsible__header">
-                        <h2 class="collapsible__title block__title">Support</h2>
-                        <img
-                            src="images/chevron.svg"
-                            alt=""
-                            class="icon icon--white collapsible__icon"
-                        />
-                    </header>
-                    <div class="collapsible__items">
-                        <ul class="list">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Knowledge Base</a></li>
-                            <li><a href="#">Forums</a></li>
-                            <li><a href="#">System Status</a></li>
-                            <li><a href="#">Web Hosting</a></li>
-                            <li><a href="#">DreamCompute</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="collapsible">
-                    <header class="collapsible__header">
-                        <h2 class="collapsible__title block__title">Domains</h2>
-                        <img
-                            src="images/chevron.svg"
-                            alt=""
-                            class="icon icon--white collapsible__icon"
-                        />
-                    </header>
-                    <div class="collapsible__items">
-                        <ul class="list">
-                            <li><a href="#">Domain Checker</a></li>
-                            <li><a href="#">Domain Transfer</a></li>
-                            <li><a href="#">Free Domain</a></li>
-                            <li><a href="#">XYZ Domain</a></li>
-                            <li><a href="#">Cheap SSL Certificate</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer__logo">
-                    <img src="images/logo.svg" alt="" />
-                    <p>Copyright &copy; 2021</p>
-                </div>
+        <section class="hero block block--bg-dark block--skew-left">
+            <div class="container grid grid--cols-2">
+                <header class="block__header">
+                    <h1 class="block__title">Cloud Hosting for Pros</h1>
+                    <p class="hero__text">Deploy your website in less than 60 seconds.</p>
+                    <a href="#" class="hero__btn btn btn--accent btn--stretched">Get Started</a>
+                </header>
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
+                    />
+                    <source
+                        type="image/png"
+                        srcset="images/banner.png 1x, images/banner@2x.png 2x"
+                    />
+                    <img class="hero__image" src="images/banner.png" alt="" />
+                </picture>
             </div>
-        </footer>
+        </section>
     </body>
 </html>
